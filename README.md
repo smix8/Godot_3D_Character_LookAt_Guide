@@ -2,6 +2,8 @@
 
 Guide how to implement 3D character LookAt behaviour inside the Godot Game Engine 3.2+
 
+No longer updated.
+
 ![banner](img/look_at_me.gif)
 
 
@@ -10,7 +12,7 @@ Guide how to implement 3D character LookAt behaviour inside the Godot Game Engin
 #### [1.) Step 1 -- Creating the head poses and animation tracks](#step-1----creating-the-head-poses-and-animation-tracks)
 #### [2.) Step 2 -- Building the AnimationTree and Blendspace](#step-2----building-the-animationtree-and-blendspace)
 #### [3.) Step 3 -- Scripting the lookat logic](#step-3----scripting-the-lookat-logic)
-#### [4.) Common Issues (Yes, I am that stupid myself)](#common-issues-yes-i-am-that-stupid-myself)
+#### [4.) Common Issues](#common-issues)
 
 If you need an example for lookat with direct bone manipulation you can find one inside the official Godot IK demo but this has a very high performance cost.
 
@@ -164,7 +166,7 @@ Inside the character script add the following block and customize the export var
 
 
 
-# Common Issues (Yes, I am that stupid myself)
+# Common Issues
 
 ### Animation is not playing
 
@@ -181,5 +183,5 @@ Inside the character script add the following block and customize the export var
 
 ### The character looks in the right direction but is very jumpy at certain angles
 - Make sure your changed code makes sense, especially if you deal with negativ rotation values
-- Make sure that you are not a gimbal lock victim (switch to quats instead of degrees even if no human can read and understand your behaviour code afterwards)
+- Make sure that you are not running into a gimbal lock e.g. switch to quats instead of degrees
 
